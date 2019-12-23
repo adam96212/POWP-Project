@@ -13,6 +13,7 @@ public class Main {
 		detailinsurance.takeDetail(resignationinsurance);
 		
 		detailinsurance.placeDetail();
+		System.out.println("");
 		Application model=retriveApplicationDataFromDatabase();
 		ApplicationView view= new ApplicationView();
 		ApplicationController controller= new ApplicationController(model,view);
@@ -47,6 +48,12 @@ public class Main {
 		    IDCard.registerObserver(LukaszPerson);
 		    IDCard.registerObserver(AdamPerson);
 		    IDCard.setAvailability("Available");
+		    
+		    //adapter 
+		    System.out.println("");
+		    CreditCard targetInterface=new BankCustomer();  
+		    targetInterface.giveBankDetails();  
+		    System.out.print(targetInterface.getCreditCard());  
 	}
 private static Application retriveApplicationDataFromDatabase() {
 	Application application= new Application();
