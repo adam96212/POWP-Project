@@ -38,6 +38,15 @@ public class Main {
 			
 		account.ShowAccountData();
 		anotherAccount.ShowAccountData();
+		
+		    Person LukaszPerson=new Person("£ukasz");
+		    Person AdamPerson=new Person("Adam");
+		    
+		    
+		    Product IDCard=new Product("IDCard", "Physical", "Not available");   
+		    IDCard.registerObserver(LukaszPerson);
+		    IDCard.registerObserver(AdamPerson);
+		    IDCard.setAvailability("Available");
 	}
 private static Application retriveApplicationDataFromDatabase() {
 	Application application= new Application();
