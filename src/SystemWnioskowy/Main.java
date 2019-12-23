@@ -21,7 +21,23 @@ public class Main {
 		controller.setNazwaW("KHB");
 		
 		controller.updateView();
-		
+
+		BankAccount account = new BankAccount.Builder(1234L)
+            .withOwner("Adam")
+            .atBranch("Piotrków")
+            .openingBalance(100)
+            .atRate(2.5)
+            .build();
+		BankAccount anotherAccount = new BankAccount.Builder(4567L)
+            .withOwner("£ukasz")
+            .atBranch("£êczyca")
+            .openingBalance(100)
+            .atRate(2.5)
+            .build();
+            
+			
+		account.ShowAccountData();
+		anotherAccount.ShowAccountData();
 	}
 private static Application retriveApplicationDataFromDatabase() {
 	Application application= new Application();
